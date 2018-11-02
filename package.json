@@ -1,0 +1,25 @@
+{
+    "name": "generator-emacs-package",
+    "version": "0.0.1",
+    "description": "Yeoman generator for GNU Emacs packages",
+    "main": "index.js",
+    "files": [
+        "generators"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:ericcrosson/generator-emacs-package"
+    },
+    "keywords": [
+        "yeoman-generator",
+        "yeoman",
+        "emacs",
+        "package",
+        "generator"
+    ],
+    "author": "Eric Crosson",
+    "license": "ISC",
+    "dependencies": {
+        "yeoman-generator": "^3.1.1"
+    }
+}
