@@ -20,6 +20,8 @@ Or to generate a package providing a [minor-mode](https://www.gnu.org/software/e
 yo emacs-package:minor-mode
 ```
 
+Then just address each `TODO:` statement in the generated project.
+
 ## License
 
 ISC © Eric Crosson
