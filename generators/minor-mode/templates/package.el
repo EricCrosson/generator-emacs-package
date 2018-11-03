@@ -36,7 +36,21 @@
 
 
 ;;;###autoload
-;; TODO: Entry-function goes here
+(define-minor-mode <%= pkg %>
+  "TODO: write docstring"
+  ;; TODO: set init-value
+  :init-value nil
+  ;; TODO: set lighter
+  :lighter nil
+  ;; TODO: set keymap
+  :keymap (let ((map (make-sparse-keymap)))
+            (define-key map (kbd "C-x O") 'other-window-previous)
+            map)
+  ;; TODO: set global
+  :global t
+  ;; TODO: set group
+  :group 'other-window-previous
+  :require '<%= pkg %>)
 
 
 (provide '<%= pkg %>)

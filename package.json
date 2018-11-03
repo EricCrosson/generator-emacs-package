@@ -20,6 +20,7 @@
     "author": "Eric Crosson",
     "license": "ISC",
     "dependencies": {
+        "parse-git-config": "^2.0.3",
         "yeoman-generator": "^3.1.1"
     }
 }

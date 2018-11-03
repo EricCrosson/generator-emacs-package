@@ -63,7 +63,6 @@ module.exports = class extends Generator {
         }]).then((answers) => {
             input = answers
             git_username = answers.git_repository.split('/').slice(-2)[0]
-            console.log(answers)
         })
     }
 
