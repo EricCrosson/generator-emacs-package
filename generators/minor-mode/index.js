@@ -117,6 +117,7 @@ module.exports = class extends Generator {
                 name: input.name,
                 date_year: date_year,
                 pkg: input.pkg,
+                pkg_group: input.pkg.replace(/-mode/, ''),
                 email: input.email,
                 tagline: input.tagline,
                 keywords: input.keywords,

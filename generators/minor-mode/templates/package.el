@@ -50,7 +50,7 @@
   ;; TODO: set global
   :global t
   ;; TODO: set group
-  :group 'other-window-previous
+  :group '<%= pkg_group %>
   :require '<%= pkg %>)
 
 
