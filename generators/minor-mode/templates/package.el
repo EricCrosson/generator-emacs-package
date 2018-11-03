@@ -44,7 +44,8 @@
   :lighter nil
   ;; TODO: set keymap
   :keymap (let ((map (make-sparse-keymap)))
-            (define-key map (kbd "C-x O") 'other-window-previous)
+            ;; TODO: define keybindings and associated functions
+            (define-key map (kbd "") ')
             map)
   ;; TODO: set global
   :global t
