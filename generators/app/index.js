@@ -6,8 +6,15 @@ const path = require('path')
 const now = new Date()
 const date_year = now.getFullYear()
 
+
+const parse = require('parse-git-config')
+const git_config = parse.sync({path: `${os.homedir()}/.gitconfig`})
+
+var git_username = (git_config.github || {}).user || os.userInfo().username
+const git_full_name = git_config.user.name
+const git_email = git_config.user.email
+
 var input
-var github_username
 
 module.exports = class extends Generator {
     prompting() {
@@ -30,7 +37,7 @@ module.exports = class extends Generator {
             type: 'input',
             name: 'git_repository',
             message: 'Your hosted git repository',
-            default: `https://github.com/${os.userInfo().username}/${this.appname.replace(/ /g, '-')}`
+            default: `https://github.com/${git_username}/${this.appname.replace(/ /g, '-')}`
         }, {
             type: 'input',
             name: 'version',
@@ -40,12 +47,12 @@ module.exports = class extends Generator {
             type: 'input',
             name: 'author',
             message: 'Your name',
-            default: os.userInfo().username
+            default: git_full_name
         }, {
             type: 'input',
             name: 'email',
             message: 'Your email address',
-            default: `${os.userInfo().username}@gmail.com`
+            default: git_email
         }]).then((answers) => {
             input = answers
             github_username = answers.git_repository.split('/').slice(-2)[0]
