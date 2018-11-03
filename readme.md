@@ -14,6 +14,12 @@ npm i -g generator-emacs-package
 yo emacs-package
 ```
 
+Or to generate a package providing a [minor-mode](https://www.gnu.org/software/emacs/manual/html_node/emacs/Minor-Modes.html)
+
+```bash
+yo emacs-package:minor-mode
+```
+
 ## License
 
 ISC © Eric Crosson
