@@ -1,4 +1,4 @@
-# <%= pkg %> [![Build Status](https://travis-ci.org/<%= git_username %>/<%= pkg %>.svg?branch=master)](https://travis-ci.org/<%= git_username %>/<%= pkg %>)
+# <%= pkg %> [![Build Status](https://travis-ci.org/<%= git_username %>/<%= pkg %>.svg?branch=master)](https://travis-ci.org/<%= git_username %>/<%= pkg %>) [![Version](https://img.shields.io/github/tag/<%= git_username %>/<%= pkg %>.svg)](https://github.com/<%= git_username %>/<%= pkg %>/releases)
 
 > <%= tagline %>
 
