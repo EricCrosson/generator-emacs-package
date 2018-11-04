@@ -76,8 +76,8 @@ module.exports = class extends Generator {
             default: git_email
         }]).then((answers) => {
             input = answers
-            input.useQuelpa = input.installer === 'useQuelpa',
-            input.useMelpa = input.installer === 'useMelpa',
+            input.useQuelpa = input.installer === 'useQuelpa'
+            input.useMelpa = input.installer === 'useMelpa'
             input.useManual = input.installer === 'useManual'
             input.git_username = answers.git_repository.split('/').slice(-2)[0]
             this.composeWith(require.resolve('../common'), { options: input })

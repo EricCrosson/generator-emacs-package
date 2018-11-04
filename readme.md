@@ -1,4 +1,4 @@
-# generator-emacs-package [![npm](https://img.shields.io/npm/dt/generator-emacs-package.svg)](https://www.npmjs.com/package/generator-emacs-package)
+# generator-emacs-package [![npm](https://img.shields.io/npm/dt/generator-emacs-package.svg)](https://www.npmjs.com/package/generator-emacs-package)  [![Version](https://img.shields.io/github/tag/EricCrosson/generator-emacs-package.svg)](https://github.com/EricCrosson/generator-emacs-package/releases)
 
 > A [yeoman](https://github.com/yeoman) generator for [GNU Emacs](https://www.gnu.org/software/emacs/) packages
 
