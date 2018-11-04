@@ -6,11 +6,10 @@ const path = require('path')
 const now = new Date()
 const date_year = now.getFullYear()
 
-
 const parse = require('parse-git-config')
 const git_config = parse.sync({path: `${os.homedir()}/.gitconfig`})
 
-var git_username = (git_config.github || {}).user || os.userInfo().username
+const git_username = (git_config.github || {}).user || os.userInfo().username
 const git_full_name = git_config.user.name
 const git_email = git_config.user.email
 
@@ -41,6 +40,20 @@ module.exports = class extends Generator {
                       "processes", "terminals", "tex", "tools", "unix",
                       "vc", "wp"]
         }, {
+            type: 'list',
+            name: 'installer',
+            message: "Installation method",
+            choices: [{
+                    name: 'quelpa',
+                    value: 'useQuelpa'
+                }, {
+                    name: 'melpa',
+                    value: 'useMelpa'
+                }, {
+                    name: 'manual',
+                    value: 'useManual'
+                }]
+        }, {
             type: 'input',
             name: 'git_repository',
             message: 'Your hosted git repository',
@@ -62,52 +75,12 @@ module.exports = class extends Generator {
             default: git_email
         }]).then((answers) => {
             input = answers
-            git_username = answers.git_repository.split('/').slice(-2)[0]
-            console.log(answers)
+            input.useQuelpa = input.installer === 'useQuelpa',
+            input.useMelpa = input.installer === 'useMelpa',
+            input.useManual = input.installer === 'useManual'
+            input.git_username = answers.git_repository.split('/').slice(-2)[0]
+            this.composeWith(require.resolve('../common'), { options: input })
         })
-    }
-
-    createReadme() {
-        this.fs.copyTpl(
-            this.templatePath('readme.md'),
-            this.destinationPath('readme.md'),
-            {
-                name: input.name,
-                pkg: input.pkg,
-                tagline: input.tagline,
-                keywords: input.keywords,
-                version: input.version,
-                author: input.author,
-                git_repository: input.git_repository,
-                git_username: git_username
-            }
-        )
-    }
-
-    createMakefile() {
-        this.fs.copyTpl(
-            this.templatePath('Makefile'),
-            this.destinationPath('Makefile'),
-            {
-                pkg: input.pkg
-            }
-        )
-    }
-
-    createTravisYml() {
-        this.fs.copyTpl(
-            this.templatePath('.travis.yml'),
-            this.destinationPath('.travis.yml'),
-            {}
-        )
-    }
-
-    createGitignore() {
-        this.fs.copyTpl(
-            this.templatePath('.gitignore'),
-            this.destinationPath('.gitignore'),
-            {}
-        )
     }
 
     createElisp() {
@@ -124,7 +97,7 @@ module.exports = class extends Generator {
                 version: input.version,
                 author: input.author,
                 git_repository: input.git_repository,
-                git_username: git_username
+                git_username: input.git_username
             }
         )
     }
