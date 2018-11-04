@@ -8,6 +8,8 @@
 ;; URL: <%= git_repository %>
 ;; Package-Requires: ((emacs "24"))
 ;;
+;; This file is not a part of GNU Emacs.
+;;
 ;;
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
