@@ -28,6 +28,14 @@ module.exports = class extends Generator {
         )
     }
 
+    createLicense() {
+        this.fs.copyTpl(
+            this.templatePath('license'),
+            this.destinationPath('license'),
+            {}
+        )
+    }
+
     createReadme() {
         this.fs.copyTpl(
             this.templatePath('readme.md'),
