@@ -1,9 +1,9 @@
-# <%= pkg %> [![Build Status](https://travis-ci.org/<%= git_username %>/<%= pkg %>.svg?branch=master)](https://travis-ci.org/<%= git_username %>/<%= pkg %>) [![Version](https://img.shields.io/github/tag/<%= git_username %>/<%= pkg %>.svg)](https://github.com/<%= git_username %>/<%= pkg %>/releases)
+# <%= pkg %> [![Build Status](https://travis-ci.org/<%= git_username %>/<%= pkg %>.svg?branch=master)](https://travis-ci.org/<%= git_username %>/<%= pkg %>)<% if (useMelpa) { %> [![MELPA](http://melpa.org/packages/<%= pkg %>-badge.svg)](http://melpa.org/#/<%= pkg %>)<% } if (useQuelpa || useManual) { %> [![Version](https://img.shields.io/github/tag/<%= git_username %>/<%= pkg %>.svg)](https://github.com/<%= git_username %>/<%= pkg %>/releases)<% } %>
 
 > <%= tagline %>
 
 ## Install
-
+<% if (useQuelpa) { %>
 With [Quelpa](https://framagit.org/steckerhalter/quelpa)
 
 ``` {.sourceCode .lisp}
@@ -14,7 +14,7 @@ With [Quelpa](https://framagit.org/steckerhalter/quelpa)
   ;; TODO: write config, if any
   :config ())
 ```
-
+<% } if (useMelpa) {  %>
 From [MELPA](https://melpa.org/)
 
 ``` {.sourceCode .lisp}
@@ -23,7 +23,7 @@ From [MELPA](https://melpa.org/)
   ;; TODO: write config, if any
   :config ())
 ```
-
+<% } %>
 Or manually, after downloading into your `load-path`
 
 ``` {.sourceCode .lisp}
