@@ -35,6 +35,10 @@ Or manually, after downloading into your `load-path`
 
 TODO
 
+## Example
+
+TODO
+
 ## Related
 
 TODO
