@@ -35,9 +35,9 @@ Or manually, after downloading into your `load-path`
 
 TODO
 
-## Example
+<!-- ## Example -->
 
-TODO
+<!-- ![TODO: set hover-text](https://raw.githubusercontent.com/<%= git_username %>/<%= pkg %>/master/img/demo.{TODO: set filetype png,gif}) -->
 
 ## Related
 
