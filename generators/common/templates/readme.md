@@ -1,4 +1,4 @@
-# <%= pkg %> [![Build Status](https://travis-ci.org/<%= git_username %>/<%= pkg %>.svg?branch=master)](https://travis-ci.org/<%= git_username %>/<%= pkg %>)<% if (useMelpa) { %> [![MELPA](http://melpa.org/packages/<%= pkg %>-badge.svg)](http://melpa.org/#/<%= pkg %>)<% } if (useQuelpa || useManual) { %> [![Version](https://img.shields.io/github/tag/<%= git_username %>/<%= pkg %>.svg)](https://github.com/<%= git_username %>/<%= pkg %>/releases)<% } %>
+# <%= pkg %> [![Build Status](https://travis-ci.org/<%= git_username %>/<%= pkg %>.svg?branch=master)](https://travis-ci.org/<%= git_username %>/<%= pkg %>) <% if (useMelpa) { %> [![MELPA](http://melpa.org/packages/<%= pkg %>-badge.svg)](http://melpa.org/#/<%= pkg %>) [![MELPA Stable](https://stable.melpa.org/packages/<%= pkg %>-badge.svg)](https://stable.melpa.org/#/<%= pkg %>)<% } if (useQuelpa || useManual) { %> [![Version](https://img.shields.io/github/tag/<%= git_username %>/<%= pkg %>.svg)](https://github.com/<%= git_username %>/<%= pkg %>/releases)<% } %>
 
 > <%= tagline %>
 
