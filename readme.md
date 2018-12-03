@@ -10,17 +10,19 @@ npm i -g generator-emacs-package
 
 ## Use
 
+Create a directory for the new package, `cd` inside and generate the package skeleton with
+
 ```bash
 yo emacs-package
 ```
 
-Or generate a package defining a [minor-mode](https://www.gnu.org/software/emacs/manual/html_node/emacs/Minor-Modes.html)
+or generate a package defining a [minor-mode](https://www.gnu.org/software/emacs/manual/html_node/emacs/Minor-Modes.html)
 
 ```bash
 yo emacs-package:minor-mode
 ```
 
-Then address each `TODO:` statement in the generated project.
+Finally, address each `TODO:` statement in the generated project.
 
 ## License
 
