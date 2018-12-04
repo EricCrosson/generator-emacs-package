@@ -1,4 +1,4 @@
-;;; <%= pkg %>.el --- <%= tagline %>
+;;; <%= pkg %>.el --- <%= tagline %> -*- lexical-binding: t; -*-
 ;;
 ;;; Copyright (C) <%= date_year %>  Free Software Foundation, Inc.
 ;;
