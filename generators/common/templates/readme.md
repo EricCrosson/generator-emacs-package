@@ -43,7 +43,7 @@ TODO
 
 TODO
 
-## Acknowledgements
+## Acknowledgments
 
 TODO
 
