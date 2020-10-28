@@ -20,14 +20,6 @@ module.exports = class extends Generator {
         )
     }
 
-    createGitignore() {
-        this.fs.copyTpl(
-            this.templatePath('_gitignore'),
-            this.destinationPath('.gitignore'),
-            {}
-        )
-    }
-
     createLicense() {
         this.fs.copyTpl(
             this.templatePath('license'),
